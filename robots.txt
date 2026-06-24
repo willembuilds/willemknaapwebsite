@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Major AI / answer engines explicitly welcomed
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://willemknaap.com/sitemap.xml
