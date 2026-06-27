@@ -44,10 +44,10 @@
 <style>
   :root{
     --paper:#FAFAF8; --paper-2:#F1F1ED; --paper-3:#E7E7E1; --blush:#EFF1F1;
-    --ink:#0F172A; --ink-2:#1B2435; --ink-soft:#334155; --ink-faint:rgba(15,23,42,.62);
+    --ink:#0F172A; --ink-2:#1B2435; --ink-soft:#334155; --ink-faint:rgba(15,23,42,.5);
     --petrol:#0F172A; --petrol-2:#1B2435;
     --terra:#B45309; --terra-2:#C2640F; --ochre:#06B6D4; --cyan:#06B6D4; --text:#1F2937;
-    --cream:#FAFAF8; --cream-dim:rgba(250,250,248,.68); --cream-faint:rgba(250,250,248,.58);
+    --cream:#FAFAF8; --cream-dim:rgba(250,250,248,.68); --cream-faint:rgba(250,250,248,.42);
     --line:rgba(15,23,42,.11); --line-soft:rgba(15,23,42,.06); --line-d:rgba(250,250,248,.16);
     --serif:"Fraunces",Georgia,serif; --sans:"Hanken Grotesk",-apple-system,system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
   }
@@ -165,7 +165,7 @@
 
   /* HOW I WORK (blush) */
   .how{background:var(--blush)}
-  .steps{margin-top:50px;display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .steps{margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .step{background:var(--blush);padding:34px 24px 36px}
   .step .sn{font-family:var(--serif);font-weight:300;font-size:46px;color:var(--terra);line-height:1}
   .step h4{font-family:var(--serif);font-weight:400;font-size:20px;margin:16px 0 11px;line-height:1.14;letter-spacing:-.005em}
@@ -322,6 +322,8 @@
   @media(max-width:820px){.theme{margin:34px 0}}
   .cta-mail{margin-top:14px;font-size:12px;color:var(--ink-faint)}
   .cta-mail a{color:var(--terra);border-bottom:1px solid rgba(180,83,9,.45);padding-bottom:1px}
+.nav-right{display:flex;align-items:center;gap:14px}.lang-switch{display:inline-flex;align-items:center;gap:3px;background:rgba(15,23,42,.05);border:1px solid var(--line);border-radius:999px;padding:3px}.lang-btn{width:30px;height:21px;padding:0;border:0;background:transparent;border-radius:13px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;opacity:.45;transition:opacity .2s}.lang-btn svg{width:22px;height:15px;border-radius:3px;display:block;box-shadow:0 0 0 1px rgba(15,23,42,.15)}.lang-btn:hover{opacity:.8}.lang-btn[aria-pressed="true"]{opacity:1;box-shadow:0 0 0 2px var(--terra),0 0 0 3px var(--paper)}
+
 </style>
 </head>
 <body>
@@ -330,9 +332,9 @@
   <div class="nav-in">
     <a href="#top" class="brand"><span class="dot"></span>Willem Knaap</a>
     <div class="nav-links">
-      <a href="#what">What I do</a><a href="#how">How I work</a><a href="#work">Work</a><a href="#lens">Perspective</a><a href="#mandates">Mandates</a>
+      <a href="#what" data-i18n="nav_what">What I do</a><a href="#how" data-i18n="nav_how">How I work</a><a href="#work" data-i18n="nav_work">Work</a><a href="#lens" data-i18n="nav_lens">Perspective</a><a href="#mandates" data-i18n="nav_mand">Mandates</a>
     </div>
-    <a href="mailto:willem@ventureplanner.nl?subject=Request%20for%20a%20meeting%20with%20Willem%20Knaap&body=Hi%20Willem%2C%0D%0A%0D%0AI%20would%20like%20to%20request%20a%20meeting%20to%20discuss%20" class="nav-cta" target="_blank" rel="noopener">Let's talk</a>
+    <div class="nav-right"><div class="lang-switch" role="group" aria-label="Taal / Language"><button type="button" class="lang-btn" data-lang="en" aria-label="English" aria-pressed="true"><svg viewBox="0 0 60 30" aria-hidden="true"><clipPath id="uk-s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="uk-t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#uk-s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#uk-t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></button><button type="button" class="lang-btn" data-lang="nl" aria-label="Nederlands" aria-pressed="false"><svg viewBox="0 0 9 6" aria-hidden="true"><rect width="9" height="6" fill="#21468B"/><rect width="9" height="4" fill="#fff"/><rect width="9" height="2" fill="#AE1C28"/></svg></button></div><a href="mailto:willem@ventureplanner.nl?subject=Request%20for%20a%20meeting%20with%20Willem%20Knaap&body=Hi%20Willem%2C%0D%0A%0D%0AI%20would%20like%20to%20request%20a%20meeting%20to%20discuss%20" class="nav-cta" data-i18n="cta_talk" target="_blank" rel="noopener">Let's talk</a></div>
   </div>
 </nav>
 
@@ -343,16 +345,16 @@
   <div class="wrap">
     <div class="hero">
       <div>
-        <div class="hk mono rv">Interim Director · Fractional Executive · AI Adoption &amp; Venture Growth</div>
-        <h1 class="rv">Turning AI ambition into transformation, <span class="ital">execution and growth.</span></h1>
-        <p class="lead rv">I help corporates, public-private ecosystems and technology ventures turn AI ambition and strategy into execution: the use cases, operating models, data and AI infrastructure, programs and adoption loops that move real value. Strategy put to work, not another deck.</p>
-        <div class="avail rv"><span class="pulse"></span>Available for interim, fractional &amp; advisory assignments</div>
-        <div class="avail-sub mono rv">AI adoption &amp; transformation &middot; Program leadership &middot; Venture growth &middot; Use cases &amp; data/AI operating models &middot; Working sessions &amp; executive alignment</div>
+        <div class="hk mono rv" data-i18n="hk">Interim Director · Fractional Executive · AI Adoption · Venture Growth</div>
+        <h1 class="rv" data-i18n="h1">Turning AI ambition into transformation, <span class="ital">execution and growth.</span></h1>
+        <p class="lead rv" data-i18n="lead">I help corporates, public-private ecosystems and technology ventures turn AI ambition into execution: sharp use cases, working operating models, data and AI infrastructure, programs and adoption trajectories that create value. Strategy put to work, not another deck.</p>
+        <div class="avail rv" data-i18n="avail"><span class="pulse"></span>Available for interim, fractional and advisory mandates</div>
+        <div class="avail-sub mono rv" data-i18n="availsub">AI adoption and transformation &middot; Program leadership &middot; Venture growth &middot; Use cases and data/AI operating models &middot; Executive working sessions and alignment</div>
         <div class="cta-row rv">
-          <a class="btn btn-fill" href="mailto:willem@ventureplanner.nl?subject=Request%20for%20a%20meeting%20with%20Willem%20Knaap&body=Hi%20Willem%2C%0D%0A%0D%0AI%20would%20like%20to%20request%20a%20meeting%20to%20discuss%20" target="_blank" rel="noopener">Discuss a mandate</a>
+          <a class="btn btn-fill" href="mailto:willem@ventureplanner.nl?subject=Request%20for%20a%20meeting%20with%20Willem%20Knaap&body=Hi%20Willem%2C%0D%0A%0D%0AI%20would%20like%20to%20request%20a%20meeting%20to%20discuss%20" target="_blank" rel="noopener"><span data-i18n="btn_discuss">Discuss a mandate</span></a>
           <a class="btn btn-line" href="https://www.linkedin.com/in/willemknaap" target="_blank" rel="noopener">LinkedIn</a>
         </div>
-        <div class="cta-mail mono rv">or email <a href="mailto:willem@ventureplanner.nl?subject=Request%20for%20a%20meeting%20with%20Willem%20Knaap&body=Hi%20Willem%2C%0D%0A%0D%0AI%20would%20like%20to%20request%20a%20meeting%20to%20discuss%20" target="_blank" rel="noopener">willem@ventureplanner.nl</a></div>
+        <div class="cta-mail mono rv"><span data-i18n="mailpre">or email </span><a href="mailto:willem@ventureplanner.nl?subject=Request%20for%20a%20meeting%20with%20Willem%20Knaap&body=Hi%20Willem%2C%0D%0A%0D%0AI%20would%20like%20to%20request%20a%20meeting%20to%20discuss%20" target="_blank" rel="noopener">willem@ventureplanner.nl</a></div>
       </div>
       <div class="hero-right rv">
         <div class="figure">
@@ -361,10 +363,10 @@
           
         </div>
         <div class="pgrid">
-          <div class="pg has-img"><img decoding="async" width="760" height="760" src="/assets/grid-1.webp" alt="Willem Knaap in conversation on camera" loading="lazy"><div class="ph"><span class="gl"></span><span class="ttl">In conversation</span><span class="sub">on camera</span></div><div class="meta"><span class="ttl">In conversation</span><span class="sub">on camera</span></div></div>
-          <div class="pg has-img"><img decoding="async" width="760" height="760" src="/assets/grid-2.webp" alt="Willem Knaap moderating a panel at Food4Future in Bilbao" loading="lazy"><div class="ph"><span class="gl"></span><span class="ttl">Moderating</span><span class="sub">Food4Future, Bilbao</span></div><div class="meta"><span class="ttl">Moderating</span><span class="sub">Food4Future, Bilbao</span></div></div>
-          <div class="pg has-img"><img decoding="async" width="760" height="760" src="/assets/grid-3.webp" alt="Willem Knaap speaking on stage at the FT TNW Conference" loading="lazy"><div class="ph"><span class="gl"></span><span class="ttl">Speaking</span><span class="sub">FT · TNW</span></div><div class="meta"><span class="ttl">Speaking</span><span class="sub">FT · TNW Conference</span></div></div>
-          <div class="pg has-img"><img decoding="async" width="760" height="760" src="/assets/grid-4.webp" alt="Willem Knaap in a working session with founders" loading="lazy"><div class="ph"><span class="gl"></span><span class="ttl">Working session</span><span class="sub">with founders</span></div><div class="meta"><span class="ttl">Working session</span><span class="sub">with founders</span></div></div>
+          <div class="pg has-img"><img decoding="async" width="760" height="760" src="/assets/grid-1.webp" alt="Willem Knaap in conversation on camera" data-alt-nl="Willem Knaap in gesprek voor de camera" loading="lazy"><div class="ph"><span class="gl"></span><span class="ttl" data-i18n="g_conv">In conversation</span><span class="sub" data-i18n="g_cam">on camera</span></div><div class="meta"><span class="ttl" data-i18n="g_conv">In conversation</span><span class="sub" data-i18n="g_cam">on camera</span></div></div>
+          <div class="pg has-img"><img decoding="async" width="760" height="760" src="/assets/grid-2.webp" alt="Willem Knaap moderating a panel at Food4Future in Bilbao" data-alt-nl="Willem Knaap modereert een panel tijdens Food4Future in Bilbao" loading="lazy"><div class="ph"><span class="gl"></span><span class="ttl" data-i18n="g_mod">Moderating</span><span class="sub">Food4Future, Bilbao</span></div><div class="meta"><span class="ttl" data-i18n="g_mod">Moderating</span><span class="sub">Food4Future, Bilbao</span></div></div>
+          <div class="pg has-img"><img decoding="async" width="760" height="760" src="/assets/grid-3.webp" alt="Willem Knaap speaking on stage at the FT TNW Conference" data-alt-nl="Willem Knaap spreekt op het podium tijdens de FT TNW Conference" loading="lazy"><div class="ph"><span class="gl"></span><span class="ttl" data-i18n="g_speak">Speaking</span><span class="sub">FT · TNW</span></div><div class="meta"><span class="ttl" data-i18n="g_speak">Speaking</span><span class="sub">FT · TNW Conference</span></div></div>
+          <div class="pg has-img"><img decoding="async" width="760" height="760" src="/assets/grid-4.webp" alt="Willem Knaap in a working session with founders" data-alt-nl="Willem Knaap in een werksessie met founders" loading="lazy"><div class="ph"><span class="gl"></span><span class="ttl" data-i18n="g_work">Working session</span><span class="sub" data-i18n="g_found">with founders</span></div><div class="meta"><span class="ttl" data-i18n="g_work">Working session</span><span class="sub" data-i18n="g_found">with founders</span></div></div>
         </div>
       </div>
     </div>
@@ -375,43 +377,43 @@
   <div class="ring"></div><div class="ring2"></div>
   <div class="wrap">
     <div class="stats-in">
-      <div class="stat rv"><div class="num" data-count="15" data-suffix="+">0</div><div class="lbl">years</div></div>
-      <div class="stat rv"><div class="num" data-count="50" data-suffix="+">0</div><div class="lbl">programs & ventures</div></div>
-      <div class="stat rv"><div class="num" data-count="20" data-suffix="+">0</div><div class="lbl">keynote stages</div></div>
-      <div class="stat rv"><div class="num" data-count="5" data-suffix="">0</div><div class="lbl">regulated sectors</div></div>
+      <div class="stat rv"><div class="num" data-count="15" data-suffix="+">0</div><div class="lbl" data-i18n="st_years">years of experience</div></div>
+      <div class="stat rv"><div class="num" data-count="50" data-suffix="+">0</div><div class="lbl" data-i18n="st_prog">programs and ventures</div></div>
+      <div class="stat rv"><div class="num" data-count="20" data-suffix="+">0</div><div class="lbl" data-i18n="st_key">stages</div></div>
+      <div class="stat rv"><div class="num" data-count="5" data-suffix="">0</div><div class="lbl" data-i18n="st_sec">regulated sectors</div></div>
     </div>
   </div>
 </div>
 
 <section class="cred">
   <div class="wrap">
-    <div class="k rv">Experience across</div>
+    <div class="k rv" data-i18n="cred_k">Experience across</div>
   </div>
   <div class="cred-mq rv">
     <div class="cred-track">
-      <span>KickstartAI</span><span>Rabobank</span><span>ING</span><span>Peaks.com</span><span>Startupbootcamp</span><span>Ahold Delhaize</span><span>KLM</span><span>NS</span><span>Aegon</span><span>Van Lanschot Kempen</span><span>Kraft Heinz</span><span>Mondelez</span><span>Shell</span><span>Unilever</span><span>EIT Food</span><span>FME</span><span>Ministry of Economic Affairs</span><span>BZK</span><span>Justice & Security</span><span>Nationale Politie</span><span>LUMC</span>
-      <span>KickstartAI</span><span>Rabobank</span><span>ING</span><span>Peaks.com</span><span>Startupbootcamp</span><span>Ahold Delhaize</span><span>KLM</span><span>NS</span><span>Aegon</span><span>Van Lanschot Kempen</span><span>Kraft Heinz</span><span>Mondelez</span><span>Shell</span><span>Unilever</span><span>EIT Food</span><span>FME</span><span>Ministry of Economic Affairs</span><span>BZK</span><span>Justice & Security</span><span>Nationale Politie</span><span>LUMC</span>
+      <span>KickstartAI</span><span>Rabobank</span><span>ING</span><span>Peaks.com</span><span>Startupbootcamp</span><span>Ahold Delhaize</span><span>KLM</span><span>NS</span><span>Aegon</span><span>Van Lanschot Kempen</span><span>Kraft Heinz</span><span>Mondelez</span><span>Shell</span><span>Unilever</span><span>EIT Food</span><span>FME</span><span data-i18n="cred_ez">Dutch Ministry of Economic Affairs</span><span data-i18n="cred_bzk">Dutch Ministry of the Interior</span><span data-i18n="cred_jv">Dutch Ministry of Justice and Security</span><span data-i18n="cred_pol">Dutch National Police</span><span>LUMC</span>
+      <span>KickstartAI</span><span>Rabobank</span><span>ING</span><span>Peaks.com</span><span>Startupbootcamp</span><span>Ahold Delhaize</span><span>KLM</span><span>NS</span><span>Aegon</span><span>Van Lanschot Kempen</span><span>Kraft Heinz</span><span>Mondelez</span><span>Shell</span><span>Unilever</span><span>EIT Food</span><span>FME</span><span data-i18n="cred_ez">Dutch Ministry of Economic Affairs</span><span data-i18n="cred_bzk">Dutch Ministry of the Interior</span><span data-i18n="cred_jv">Dutch Ministry of Justice and Security</span><span data-i18n="cred_pol">Dutch National Police</span><span>LUMC</span>
     </div>
   </div>
 </section>
 
 <section id="what">
   <div class="wrap">
-    <div class="eyebrow rv"><span class="no">01</span><span class="t">What I do</span><span class="ln"></span></div>
-    <h2 class="rv">A senior operator who turns <span class="ital">ambition into execution.</span></h2>
-    <p class="h2-sub rv">Technology rarely decides the outcome. People, incentives, ownership, trust and execution do. The assignments below come back to one thing: making complex technology land in practice.</p>
+    <div class="eyebrow rv"><span class="no">01</span><span class="t" data-i18n="eb_what">What I do</span><span class="ln"></span></div>
+    <h2 class="rv" data-i18n="h2_what">A senior operator who turns <span class="ital">ambition into execution.</span></h2>
+    <p class="h2-sub rv" data-i18n="sub_what">Technology rarely decides the outcome. People, incentives, ownership, trust and execution do. That is why the work below ultimately comes back to one thing: making complex technology land in practice.</p>
     <div class="what-grid">
-      <div class="fc rv" style="--acc:var(--terra)"><div class="corner"></div><div class="fn">01 · AI Adoption & Scaling</div><h3>From pilots to production.</h3>
-        <dl><dt>Problem</dt><dd>AI initiatives stall between experiment and enterprise reality.</dd><dt>I do</dt><dd>Design the adoption architecture: the framework, governance, use-case selection, capability and change that scaling actually needs.</dd><dt>Outcome</dt><dd>Use cases that scale, with measurable value and a path to production.</dd></dl></div>
-      <div class="fc rv" style="--acc:var(--terra)"><div class="corner"></div><div class="fn">02 · Venture Growth & GTM</div><h3>From product to traction.</h3>
-        <dl><dt>Problem</dt><dd>Strong technology, fragmented commercial motion.</dd><dt>I do</dt><dd>Sharpen positioning and ICP, build enterprise-grade GTM, partnerships and investor narrative.</dd><dt>Outcome</dt><dd>A venture that closes deals and scales, rather than one that keeps pitching.</dd></dl></div>
-      <div class="fc rv" style="--acc:var(--ochre)"><div class="corner"></div><div class="fn">03 · Corporate Development</div><h3>Building the route to scale.</h3>
-        <dl><dt>Problem</dt><dd>Partnership and venture moves get stuck in process.</dd><dt>I do</dt><dd>Structure partnership strategy, operating models and decision rights so deals get done.</dd><dt>Outcome</dt><dd>Partnerships that compound, not announcements that fade.</dd></dl></div>
-      <div class="fc rv" style="--acc:var(--terra-2)"><div class="corner"></div><div class="fn">04 · Public-Private Program Design</div><h3>Where government and enterprise meet.</h3>
-        <dl><dt>Problem</dt><dd>Public-private AI ambition outpaces the operating model.</dd><dt>I do</dt><dd>Design programs, governance and partner architecture across ministries, partners and corporates.</dd><dt>Outcome</dt><dd>Programs that move from intent to instruments, funding and execution.</dd></dl></div>
+      <div class="fc rv" style="--acc:var(--terra)"><div class="corner"></div><div class="fn" data-i18n="fn0">01 · AI Adoption and Scaling</div><h3 data-i18n="h3_0">From pilots to production.</h3>
+        <dl><dt data-i18n="dt_prob">Problem</dt><dd data-i18n="dd_0">AI initiatives stall between experiment, policy and the reality of the organisation.</dd><dt data-i18n="dt_ido">I do</dt><dd data-i18n="dd_1">I design the adoption architecture: framework, governance, use-case selection, capabilities, decision-making and change needed for scale.</dd><dt data-i18n="dt_out">Outcome</dt><dd data-i18n="dd_2">Use cases that scale, with measurable value and a path to production.</dd></dl></div>
+      <div class="fc rv" style="--acc:var(--terra)"><div class="corner"></div><div class="fn" data-i18n="fn1">02 · Venture Growth and GTM</div><h3 data-i18n="h3_1">From product to traction.</h3>
+        <dl><dt data-i18n="dt_prob">Problem</dt><dd data-i18n="dd_3">Strong technology, but a fragmented commercial motion.</dd><dt data-i18n="dt_ido">I do</dt><dd data-i18n="dd_4">I sharpen positioning, ICP, enterprise GTM, partnerships and investor narrative.</dd><dt data-i18n="dt_out">Outcome</dt><dd data-i18n="dd_5">A venture that closes deals and grows in a scalable way, rather than one that keeps pitching.</dd></dl></div>
+      <div class="fc rv" style="--acc:var(--ochre)"><div class="corner"></div><div class="fn" data-i18n="fn2">03 · Corporate Development</div><h3 data-i18n="h3_2">Building the route to scale.</h3>
+        <dl><dt data-i18n="dt_prob">Problem</dt><dd data-i18n="dd_6">Partnerships and venture moves get stuck in decision-making, governance or internal processes.</dd><dt data-i18n="dt_ido">I do</dt><dd data-i18n="dd_7">I structure partnership strategy, operating models and decision rights so commercial opportunities do not stay stuck.</dd><dt data-i18n="dt_out">Outcome</dt><dd data-i18n="dd_8">Deals and partnerships that move forward, not just announcements that fade.</dd></dl></div>
+      <div class="fc rv" style="--acc:var(--terra-2)"><div class="corner"></div><div class="fn" data-i18n="fn3">04 · Public-Private Program Design</div><h3 data-i18n="h3_3">Where government and enterprise meet.</h3>
+        <dl><dt data-i18n="dt_prob">Problem</dt><dd data-i18n="dd_9">Public-private AI ambition often moves faster than governance, funding and execution capacity.</dd><dt data-i18n="dt_ido">I do</dt><dd data-i18n="dd_10">I design programs, governance and partner architecture across ministries, public organisations, partners and corporates.</dd><dt data-i18n="dt_out">Outcome</dt><dd data-i18n="dd_11">Programs that move from intent to instruments, funding, use cases and execution.</dd></dl></div>
       <div class="fc fc-wide rv"><div class="corner"></div>
-        <div><div class="fn">05 · Additional domains</div><div class="tag-w">Complex technology<br>commercialisation.</div></div>
-        <div><h3>Where deep technology meets the market.</h3><p>Adjacent work across sustainability compliance and data infrastructure, including Digital Product Passport and CSRD readiness, where technology, regulation and commercial reality all have to land at once.</p></div>
+        <div><div class="fn" data-i18n="fn4">05 · Additional Domains</div><div class="tag-w" data-i18n="tagw">Commercialising complex<br>technology.</div></div>
+        <div><h3 data-i18n="h3_4">Where deep technology meets the market.</h3><p data-i18n="p_5">Adjacent work across sustainability compliance and data infrastructure, including Digital Product Passport and CSRD readiness. Relevant where technology, regulation and commercial reality all have to land at once.</p></div>
       </div>
     </div>
   </div>
@@ -419,59 +421,60 @@
 
 <section id="how" class="how">
   <div class="wrap">
-    <div class="eyebrow rv"><span class="no">02</span><span class="t">How I work</span><span class="ln"></span></div>
-    <h2 class="rv">How I work inside <span class="ital">a mandate.</span></h2>
-    <p class="h2-sub rv">Strategy is usually the easy part. What decides the outcome is the operating system underneath it: who owns what, how decisions get made, and the rhythm that turns intent into delivery.</p>
+    <div class="eyebrow rv"><span class="no">02</span><span class="t" data-i18n="eb_how">How I work</span><span class="ln"></span></div>
+    <h2 class="rv" data-i18n="h2_how">How I work inside <span class="ital">a mandate.</span></h2>
+    <p class="h2-sub rv" data-i18n="sub_how">Strategy is usually not the hardest part. What decides the outcome is the operating system underneath it: who owns what, how decisions get made, and the rhythm that turns intent into delivery.</p>
     <div class="steps">
-      <div class="step rv"><div class="sn">01</div><h4>Assess and frame</h4><p>Start from where the organisation actually is, often a blank page rather than chaos. Map the ambition, the constraints, the stakeholders and where real value can sit.</p></div>
-      <div class="step rv"><div class="sn">02</div><h4>Design the operating model</h4><p>Objectives, governance, decision rights and roles, with the data and AI landscape underneath. The structure that makes delivery possible.</p></div>
-      <div class="step rv"><div class="sn">03</div><h4>Select the use cases</h4><p>Choose where value is real and provable. Define and prioritise the use cases, so effort goes to what matters instead of oversized solutions without a case.</p></div>
-      <div class="step rv"><div class="sn">04</div><h4>Build, pilot and align</h4><p>Frameworks, ways of working and a working first delivery, measured against the goal. Programs run on people, so I align interests, ownership and timing as it is built.</p></div>
-      <div class="step rv"><div class="sn">05</div><h4>Adopt, scale and embed</h4><p>From pilot to production, embedded in teams with feedback loops, clear ownership and a clean handover.</p></div>
+      <div class="step rv"><div class="sn">01</div><h4 data-i18n="h4_0">Assess and frame</h4><p data-i18n="p_0">I start from where the organisation actually is: the ambition, constraints, stakeholders, interests and where value can genuinely sit. Sometimes from a blank page, sometimes in the middle of the chaos.</p></div>
+      <div class="step rv"><div class="sn">02</div><h4 data-i18n="h4_1">Design the operating model</h4><p data-i18n="p_1">Objectives, governance, decision rights and roles, with the data and AI landscape underneath. The structure that makes delivery possible.</p></div>
+      <div class="step rv"><div class="sn">03</div><h4 data-i18n="h4_2">Select the use cases</h4><p data-i18n="p_2">Choose where value is real and provable. Define and prioritise the use cases, so time, money and attention go to what matters, not to oversized solutions without a business case.</p></div>
+      <div class="step rv"><div class="sn">04</div><h4 data-i18n="h4_3">Build, test and align</h4><p data-i18n="p_3">Build frameworks, ways of working and first deliverables around a clear goal. Programs run on people, so I align interests, ownership, decision-making and timing while the work is being built.</p></div>
+      <div class="step rv"><div class="sn">05</div><h4 data-i18n="h4_4">Adopt, scale and embed</h4><p data-i18n="p_4">From pilot to production, embedded in teams with feedback loops, clear ownership and a careful handover.</p></div>
+      <div class="step rv"><div class="sn">06</div><h4 data-i18n="h4_learn">Learn, change, adapt</h4><p data-i18n="p_learn">Every project, program and pilot teaches the organisation something. I make sure that learning is captured, embedded and put to work, instead of lost when the work ends.</p></div>
     </div>
   </div>
 </section>
 
 <section id="work">
   <div class="wrap">
-    <div class="eyebrow rv"><span class="no">03</span><span class="t">Selected work</span><span class="ln"></span></div>
-    <h2 class="rv">A track record on the <span class="ital">harder problems.</span></h2>
+    <div class="eyebrow rv"><span class="no">03</span><span class="t" data-i18n="eb_work">Selected work</span><span class="ln"></span></div>
+    <h2 class="rv" data-i18n="h2_work">A track record on the <span class="ital">harder problems.</span></h2>
     <div class="exp-grid">
-      <div class="ex rv"><div class="role">Now · KickstartAI</div><h3>Director Strategic AI Programs & Partnerships</h3><p>Design and execution of public-private AI adoption programs with founding partners Ahold Delhaize, ING, KLM and NS, and the Dutch public sector. Author of the KickstartAI Adoption Framework and Adoption Canvas.</p><div class="stamp">Public-private · Government · Enterprise</div></div>
-      <div class="ex rv"><div class="role">Venture Planner</div><h3>Founder & Managing Partner</h3><p>Fractional executive mandates for technology ventures including GlassmedicalAI, mintBlue, Machine2Learn and proba.earth, across AI, sustainability, Digital Product Passport, CSRD and complex technology commercialisation.</p><div class="stamp">Fractional · GTM · Partnerships</div></div>
-      <div class="ex rv"><div class="role">Rabobank</div><h3>Head of Open Innovation · Senior Venture Builder</h3><p>Innovation governance and portfolio management frameworks, and the Data4Food program. Co-founded Peaks.com and led a team of thirty.</p><div class="stamp">Governance · Venture building · Fintech</div></div>
-      <div class="ex rv"><div class="role">Startupbootcamp · Innoleaps</div><h3>Programs at the corporate and venture interface</h3><p>Acceleration, corporate venturing and innovation programs with founders, investors and international ecosystems across food, energy and technology.</p><div class="stamp">Corporates · Founders · Ecosystems</div></div>
+      <div class="ex rv"><div class="role" data-i18n="role0">Now · KickstartAI</div><h3 data-i18n="h3_5">Director Strategic AI Programs & Partnerships</h3><p data-i18n="p_6">Design and execution of public-private AI adoption programs with founding partners Ahold Delhaize, ING, KLM and NS, and public organisations in the Netherlands. Author of the KickstartAI Adoption Framework and Adoption Canvas.</p><div class="stamp" data-i18n="stamp0">Public-private · Government · Enterprise</div></div>
+      <div class="ex rv"><div class="role">Venture Planner</div><h3 data-i18n="h3_6">Founder and Managing Partner</h3><p data-i18n="p_7">Fractional executive mandates for technology ventures including GlassMedicalAI, mintBlue, Machine2Learn and proba.earth. Focus on AI, sustainability, Digital Product Passport, CSRD, GTM and the commercialisation of complex technology.</p><div class="stamp">Fractional · GTM · Partnerships</div></div>
+      <div class="ex rv"><div class="role">Rabobank</div><h3 data-i18n="h3_7">Head of Open Innovation · Senior Venture Builder</h3><p data-i18n="p_8">Development of innovation governance, portfolio management and the Data4Food program. Co-founder of Peaks.com and involved in venture building, fintech innovation and multidisciplinary teams.</p><div class="stamp">Governance · Venture building · Fintech</div></div>
+      <div class="ex rv"><div class="role">Startupbootcamp · Innoleaps</div><h3 data-i18n="h3_8">Program leadership at the corporate and venture interface</h3><p data-i18n="p_9">Acceleration, corporate venturing and innovation programs with founders, investors and international ecosystems across food, energy and technology.</p><div class="stamp" data-i18n="stamp1">Corporates · Founders · Ecosystems</div></div>
     </div>
   </div>
 </section>
 
 <section id="lens">
   <div class="wrap">
-    <div class="eyebrow rv"><span class="no">04</span><span class="t">Perspective</span><span class="ln"></span></div>
-    <h2 class="rv">Where perspective <span class="ital">becomes execution.</span></h2>
-    <p class="lens-lead rv">History is context. The more you understand where something comes from, the better you can see what it can become. I learned to look that way through art and music, long before I brought it to organisations, programs and AI.</p>
+    <div class="eyebrow rv"><span class="no">04</span><span class="t" data-i18n="eb_persp">Perspective</span><span class="ln"></span></div>
+    <h2 class="rv" data-i18n="h2_lens">Where perspective <span class="ital">becomes execution.</span></h2>
+    <p class="lens-lead rv" data-i18n="lens_lead">History is context. The better you understand where something comes from, the sharper you can see what it can become. That is how I look at art and music, and ultimately also how I look at organisations, programs and AI.</p>
 
     <article class="theme rv">
       <div class="theme-body">
-        <div class="kicker">Where I learned to look</div>
-        <h3>Art teaches observation</h3>
-        <p>I have gone to museums since I was a child, raised around ateliers, secondhand bookshops and exhibitions by my father, an art historian, and now passing it on to my own children. In front of a work I read the composition, the material and the craftsmanship, the choices the maker committed to and the things they left out on purpose. All of it says something about the work and the person behind it. I read a project, a team or an organisation the same way: not only what is there, but why it came to be, what is missing, and what it would take to make it better.</p>
+        <div class="kicker" data-i18n="kick0">Where I learned to look</div>
+        <h3 data-i18n="h3_9">Art teaches observation</h3>
+        <p data-i18n="p_art">I have gone to museums since I was a child. I grew up around ateliers, second-hand bookshops and exhibitions, with a father who is an art historian, and now pass that on to my own children.<br><br>In front of a work, I look at composition, material, craft, choices and omissions. Those things say something about the work and about the maker. I read a project, team or organisation in a similar way: not only what is there, but why it came to be, what is missing, and what it would take to move it forward.</p>
       </div>
-      <div class="theme-media t-places"><img decoding="async" width="800" height="1000" src="/assets/art.webp" alt="Museum interiors and ateliers: the Louvre, Musee d'Orsay, the Rijksmuseum, the Vatican Museums, Tate Modern, Galleria Borghese and Kunstsammlung NRW" loading="lazy"><span class="ghost">01</span><span class="scrim"></span><span class="word">Art</span></div>
+      <div class="theme-media t-places"><img decoding="async" width="800" height="1000" src="/assets/art.webp" alt="Museums, ateliers and places that shaped how I look: Louvre, Musée d’Orsay, Rijksmuseum, Vatican Museums, Tate Modern, Galleria Borghese and Kunstsammlung NRW" data-alt-nl="Musea, ateliers en plekken die mijn manier van kijken hebben gevormd: Louvre, Musée d’Orsay, Rijksmuseum, Vaticaanse Musea, Tate Modern, Galleria Borghese en Kunstsammlung NRW" loading="lazy"><span class="ghost">01</span><span class="scrim"></span><span class="word" data-i18n="word_art">Art</span></div>
     </article>
 
     <article class="theme reverse rv">
       <div class="theme-body">
-        <div class="kicker">What I listen for</div>
-        <h3>Music teaches movement</h3>
-        <p>Music works the same way. I do not only hear the song, I listen to the writing, the composition, the voice, the performance and the production, and to the influences and context underneath them. The Beatles, Hendrix, Elvis, Coldplay, hip-hop, Kendrick Lamar: almost everything stands on what came before, and where a movement started tells you where it can still go. Part of it is simply enjoying craft and originality, knowing when something is genuinely new, sometimes for a whole audience, sometimes only for a small community. It is the same attention I bring to influence, timing and execution at work.</p>
+        <div class="kicker" data-i18n="kick1">What I listen for</div>
+        <h3 data-i18n="h3_10">Music teaches movement</h3>
+        <p data-i18n="p_music">Music works the same way for me. I do not only hear the song. I listen to the writing, composition, voice, performance, production and the influences underneath it.<br><br>From Vivaldi and Robert Johnson, through Charlie Parker, Elvis, The Beatles and Hendrix, to Springsteen, Michael Jackson, Nirvana, Coldplay, Kendrick Lamar and David Guetta: almost nothing comes from nowhere. Where a movement starts often tells you where it can still go.<br><br>Sometimes it is simply about enjoying craft and originality. Sometimes it is about recognising when something is genuinely new, for a large audience or for a small community. That same attention is what I bring to work: influence, timing, context and execution.</p>
       </div>
-      <div class="theme-media t-origins"><img decoding="async" width="800" height="1000" src="/assets/music.webp" alt="Music as cultural evolution: Michael Jackson, Elvis Presley, Kendrick Lamar, Coldplay, the Beatles, Robert Johnson, Nirvana and Jimi Hendrix" loading="lazy"><span class="ghost">02</span><span class="scrim"></span><span class="word">Music</span></div>
+      <div class="theme-media t-origins"><img decoding="async" width="800" height="1000" src="/assets/music.webp" alt="Music as cultural evolution: Michael Jackson, Elvis Presley, Kendrick Lamar, Coldplay, The Beatles, Robert Johnson, Nirvana and Jimi Hendrix" data-alt-nl="Muziek als culturele ontwikkeling: Michael Jackson, Elvis Presley, Kendrick Lamar, Coldplay, The Beatles, Robert Johnson, Nirvana en Jimi Hendrix" loading="lazy"><span class="ghost">02</span><span class="scrim"></span><span class="word" data-i18n="word_music">Music</span></div>
     </article>
 
     <div class="bridge rv">
-      <div class="kicker">Craft turns perspective into execution</div>
-      <p>None of this is decoration. Art and music are how I keep practising the things my work runs on: reading context, forming a point of view, recognising craft and getting something to actually work. Ideas are not enough and strategy is not enough. The value is in understanding where something comes from, seeing what it can become, and then <span class="hl">building it in the real world: organisations, programs, ventures and AI adoption.</span></p>
+      <div class="kicker" data-i18n="kick2">Craft turns perspective into execution</div>
+      <p data-i18n="p_bridge">None of this is decoration. Art and music keep me sharp on the things my work runs on: reading context, forming a point of view, recognising craft and making something actually work.<br><br>Ideas are not enough. Strategy is not enough either. The value is in understanding where something comes from, seeing what it can become, and then <span class="hl">building it in the real world: organisations, programs, ventures and AI adoption.</span></p>
     </div>
   </div>
 </section>
@@ -479,20 +482,20 @@
 <section id="mandates" class="mand">
   <div class="arc"></div>
   <div class="wrap">
-    <div class="eyebrow rv"><span class="no">05</span><span class="t">Mandates</span><span class="ln"></span></div>
-    <h2 class="rv">Engagement <span class="ital">models.</span></h2>
-    <p class="h2-sub rv">Selective work, typically two to four days a week.</p>
+    <div class="eyebrow rv"><span class="no">05</span><span class="t" data-i18n="eb_mand">Mandates</span><span class="ln"></span></div>
+    <h2 class="rv" data-i18n="h2_mand">Engagement <span class="ital">models.</span></h2>
+    <p class="h2-sub rv" data-i18n="sub_mand">Selective work, typically two to four days a week.</p>
     <div class="mand-grid">
-      <div class="mc rv"><div class="mn">01</div><h4>Fractional Executive</h4><p>Embedded senior capacity for strategy, commercial and program execution, working alongside the team.</p></div>
-      <div class="mc rv"><div class="mn">02</div><h4>Interim Director</h4><p>Time-bound leadership of programs, partnerships, ventures or innovation functions.</p></div>
-      <div class="mc rv"><div class="mn">03</div><h4>Strategic Advisor</h4><p>Senior advisory to boards, founders and leadership teams on AI adoption, ventures and corporate development.</p></div>
-      <div class="mc rv"><div class="mn">04</div><h4>AI Adoption Program Lead</h4><p>Design and delivery of enterprise and public-private AI adoption programs, frameworks and governance.</p></div>
-      <div class="mc rv"><div class="mn">05</div><h4>Venture Growth / Fractional CCO</h4><p>Commercial strategy, partnerships and investor narrative for technology ventures.</p></div>
-      <div class="mc rv"><div class="mn">06</div><h4>Corporate Development & Partnerships</h4><p>Partnership strategy, venture moves and operating model design inside corporates.</p></div>
+      <div class="mc rv"><div class="mn">01</div><h4>Fractional Executive</h4><p data-i18n="p_10">Embedded senior capacity for strategy, commercial direction and program execution, working alongside the team.</p></div>
+      <div class="mc rv"><div class="mn">02</div><h4 data-i18n="h4_5">Interim Director</h4><p data-i18n="p_11">Time-bound leadership of programs, partnerships, ventures or innovation functions.</p></div>
+      <div class="mc rv"><div class="mn">03</div><h4 data-i18n="h4_6">Strategic Advisor</h4><p data-i18n="p_12">Senior advisory to boards, founders and leadership teams on AI adoption, venture growth and corporate development.</p></div>
+      <div class="mc rv"><div class="mn">04</div><h4>AI Adoption Program Lead</h4><p data-i18n="p_13">Design and delivery of enterprise and public-private AI adoption programs, frameworks, governance and adoption trajectories.</p></div>
+      <div class="mc rv"><div class="mn">05</div><h4>Venture Growth / Fractional CCO</h4><p data-i18n="p_14">Commercial strategy, partnerships and investor narrative for technology ventures.</p></div>
+      <div class="mc rv"><div class="mn">06</div><h4>Corporate Development & Partnerships</h4><p data-i18n="p_15">Partnership strategy, venture moves and operating-model design inside corporates.</p></div>
     </div>
     <div class="mand-foot">
-      <div class="li">Selective availability for senior fractional, interim and advisory mandates, typically two to four days a week.</div>
-      <a class="btn btn-fill" href="mailto:willem@ventureplanner.nl?subject=Request%20for%20a%20meeting%20with%20Willem%20Knaap&body=Hi%20Willem%2C%0D%0A%0D%0AI%20would%20like%20to%20request%20a%20meeting%20to%20discuss%20" style="background:var(--terra);color:var(--paper)" target="_blank" rel="noopener">Discuss a mandate</a>
+      <div class="li" data-i18n="foot_li">Selective availability for senior fractional, interim and advisory mandates, typically two to four days a week.</div>
+      <a class="btn btn-fill" href="mailto:willem@ventureplanner.nl?subject=Request%20for%20a%20meeting%20with%20Willem%20Knaap&body=Hi%20Willem%2C%0D%0A%0D%0AI%20would%20like%20to%20request%20a%20meeting%20to%20discuss%20" style="background:var(--terra);color:var(--paper)" target="_blank" rel="noopener"><span data-i18n="btn_discuss">Discuss a mandate</span></a>
     </div>
   </div>
 </section>
@@ -500,9 +503,9 @@
 <section id="contact" class="close">
   <div class="circ"></div>
   <div class="wrap">
-    <div class="eyebrow rv"><span class="no">06</span><span class="t">Get in touch</span></div>
-    <h2 class="rv">If you are moving AI, technology or venture strategy from intent to <span class="ital">adoption,</span> let's talk.</h2>
-    <p class="clead rv">A short conversation usually tells both of us whether there's something to build together.</p>
+    <div class="eyebrow rv"><span class="no">06</span><span class="t" data-i18n="eb_contact">Get in touch</span></div>
+    <h2 class="rv" data-i18n="h2_contact">Want to move an AI, technology or venture strategy from intent to <span class="ital">adoption?</span> Let's talk.</h2>
+    <p class="clead rv" data-i18n="clead">One short conversation usually makes clear whether there is something to build together.</p>
     <div class="cta-row rv">
       <a class="btn btn-fill" href="mailto:willem@ventureplanner.nl?subject=Request%20for%20a%20meeting%20with%20Willem%20Knaap&body=Hi%20Willem%2C%0D%0A%0D%0AI%20would%20like%20to%20request%20a%20meeting%20to%20discuss%20" target="_blank" rel="noopener">willem@ventureplanner.nl</a>
       <a class="btn btn-line" href="https://wa.me/31628550677?text=Hi%20Willem%2C%20I%20came%20across%20your%20website%20and%20would%20like%20to%20discuss%20a%20mandate." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.207zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>WhatsApp</a>
@@ -542,6 +545,9 @@
       if(c)c.style.transform='translateY('+(y*0.12)+'px)';if(a)a.style.transform='translateY('+(y*-0.08)+'px)';},{passive:true});
   }
   document.querySelectorAll('.tile img, .pg img').forEach(img=>{img.addEventListener('load',()=>{const p=img.closest('.tile')||img.closest('.pg');if(p)p.classList.add('has-img')});img.addEventListener('error',()=>{img.style.display='none'});});
+</script>
+<script>
+(function(){var I18N={"nav_what": "Wat ik doe", "nav_how": "Hoe ik werk", "nav_work": "Werk", "nav_lens": "Perspectief", "nav_mand": "Opdrachten", "cta_talk": "Neem contact op", "hk": "Interim-directeur · Fractional executive · AI-adoptie · Venture growth", "h1": "AI-ambitie omzetten in transformatie, <span class=\"ital\">uitvoering en groei.</span>", "lead": "Ik help corporates, publiek-private ecosystemen en technologie-ventures om AI-ambitie om te zetten in uitvoering: scherpe use cases, werkende operating models, data- en AI-infrastructuur, programma’s en adoptietrajecten die waarde opleveren. Strategie die werkt, niet weer een presentatie.", "avail": "<span class=\"pulse\"></span>Beschikbaar voor interim-, fractional- en adviesopdrachten", "availsub": "AI-adoptie en transformatie · Programmaleiderschap · Venture growth · Use cases en data/AI operating models · Directiewerksessies en afstemming", "btn_discuss": "Bespreek een opdracht", "mailpre": "of mail ", "g_conv": "In gesprek", "g_cam": "voor de camera", "g_mod": "Modereren", "g_speak": "Spreken", "g_work": "Werksessie", "g_found": "met oprichters", "st_years": "jaar ervaring", "st_prog": "programma’s en ventures", "st_key": "podia", "st_sec": "gereguleerde sectoren", "cred_k": "Ervaring met", "cred_ez": "Ministerie van Economische Zaken", "cred_bzk": "Ministerie van BZK", "cred_jv": "Ministerie van Justitie en Veiligheid", "eb_what": "Wat ik doe", "eb_how": "Hoe ik werk", "eb_work": "Geselecteerd werk", "eb_persp": "Perspectief", "eb_mand": "Opdrachten", "eb_contact": "Neem contact op", "h2_what": "Een senior operator die <span class=\"ital\">ambitie omzet in uitvoering.</span>", "h2_how": "Hoe ik werk binnen <span class=\"ital\">een opdracht.</span>", "h2_work": "Een trackrecord op de <span class=\"ital\">lastigere vraagstukken.</span>", "h2_lens": "Waar perspectief <span class=\"ital\">uitvoering wordt.</span>", "h2_mand": "Samenwerkings<span class=\"ital\">modellen.</span>", "h2_contact": "Wil je een AI-, technologie- of venture-strategie van intentie naar <span class=\"ital\">adoptie</span> brengen? Laten we praten.", "sub_what": "Techniek bepaalt zelden de uitkomst. Mensen, prikkels, eigenaarschap, vertrouwen en uitvoering wel. Daarom gaan de opdrachten hieronder uiteindelijk over één ding: complexe technologie laten landen in de praktijk.", "sub_how": "Strategie is meestal niet het moeilijkste. De uitkomst wordt bepaald door het systeem eronder: wie waar eigenaar van is, hoe besluiten worden genomen, en welk ritme intentie omzet in oplevering.", "sub_mand": "Selectief werk, doorgaans twee tot vier dagen per week.", "lens_lead": "Geschiedenis is context. Hoe beter je begrijpt waar iets vandaan komt, hoe scherper je ziet wat het kan worden. Dat is hoe ik naar kunst en muziek kijk, en uiteindelijk ook hoe ik naar organisaties, programma’s en AI kijk.", "clead": "Eén kort gesprek maakt meestal duidelijk of er samen iets te bouwen valt.", "h3_0": "Van pilots naar productie.", "h3_1": "Van product naar tractie.", "h3_2": "De route naar schaal bouwen.", "h3_3": "Waar overheid en bedrijfsleven samenkomen.", "h3_4": "Waar deep tech de markt ontmoet.", "h3_5": "Director Strategic AI Programs & Partnerships", "h3_6": "Oprichter en Managing Partner", "h3_7": "Head of Open Innovation · Senior Venture Builder", "h3_8": "Programmadirectie op het snijvlak van corporates en ventures", "h3_9": "Kunst leert observeren", "h3_10": "Muziek leert beweging", "h4_0": "Inventariseren en kaderen", "h4_1": "Het operating model ontwerpen", "h4_2": "De use cases kiezen", "h4_3": "Bouwen, testen en afstemmen", "h4_4": "Adopteren, opschalen en verankeren", "h4_5": "Interim-directeur", "h4_6": "Strategisch adviseur", "p_0": "Ik begin bij waar de organisatie echt staat: de ambitie, beperkingen, stakeholders, belangen en waar waarde werkelijk kan zitten. Soms vanaf een blanco pagina, soms midden in de chaos.", "p_1": "Doelen, governance, besluitrechten en rollen scherp maken, met het data- en AI-landschap eronder. De structuur die oplevering mogelijk maakt.", "p_2": "Kiezen waar waarde echt en aantoonbaar is. Use cases definiëren en prioriteren, zodat tijd, geld en aandacht naar wat telt gaan, niet naar oversized oplossingen zonder business case.", "p_3": "Frameworks, werkwijzen en eerste opleveringen bouwen rondom een concreet doel. Programma’s draaien op mensen, dus ik breng belangen, eigenaarschap, besluitvorming en timing in lijn terwijl er wordt gebouwd.", "p_4": "Van pilot naar productie, verankerd in teams, met feedbackloops, helder eigenaarschap en een zorgvuldige overdracht.", "p_5": "Aanpalend werk rond duurzaamheidscompliance en data-infrastructuur, zoals Digital Product Passport en CSRD-gereedheid. Relevant waar technologie, regelgeving en commerciële realiteit tegelijk moeten landen.", "p_6": "Ontwerp en uitvoering van publiek-private AI-adoptieprogramma’s met founding partners Ahold Delhaize, ING, KLM en NS, en publieke organisaties in Nederland. Auteur van het KickstartAI Adoption Framework en Adoption Canvas.", "p_7": "Fractional-executive-opdrachten voor technologie-ventures, waaronder GlassMedicalAI, mintBlue, Machine2Learn en proba.earth. Focus op AI, duurzaamheid, Digital Product Passport, CSRD, GTM en het commercialiseren van complexe technologie.", "p_8": "Ontwikkeling van innovatiegovernance, portfoliomanagement en het Data4Food-programma. Medeoprichter van Peaks.com en betrokken bij venture building, fintech-innovatie en multidisciplinaire teams.", "p_9": "Acceleratie-, corporate-venturing- en innovatieprogramma’s met oprichters, investeerders en internationale ecosystemen in food, energie en technologie.", "p_10": "Ingebedde senior slagkracht voor strategie, commercie en programma-uitvoering, samen met het team.", "p_11": "Tijdelijke leiding over programma’s, partnerships, ventures of innovatiefuncties.", "p_12": "Senior advies aan boards, oprichters en directieteams over AI-adoptie, venture growth en corporate development.", "p_13": "Ontwerp en oplevering van enterprise- en publiek-private AI-adoptieprogramma’s, frameworks, governance en adoptietrajecten.", "p_14": "Commerciële strategie, partnerships en investor-narratief voor technologie-ventures.", "p_15": "Partnershipstrategie, venture-stappen en operating-modelontwerp binnen corporates.", "p_art": "Ik ga sinds mijn kindertijd naar musea. Ik groeide op tussen ateliers, tweedehands boekwinkels en tentoonstellingen, met een vader als kunsthistoricus, en geef dat nu door aan mijn eigen kinderen.<br><br>Voor een werk kijk ik naar compositie, materiaal, vakmanschap, keuzes en weglatingen. Die dingen zeggen iets over het werk en over de maker. Een project, team of organisatie lees ik op een vergelijkbare manier: niet alleen wat er staat, maar waarom het zo is ontstaan, wat ontbreekt, en wat nodig is om het verder te brengen.", "p_music": "Muziek werkt voor mij op dezelfde manier. Ik hoor niet alleen het nummer, maar ook het schrijven, de compositie, de stem, de uitvoering, de productie en de invloeden eronder.<br><br>Van Vivaldi en Robert Johnson, via Charlie Parker, Elvis, The Beatles en Hendrix, tot Springsteen, Michael Jackson, Nirvana, Coldplay, Kendrick Lamar en David Guetta: vrijwel niets ontstaat uit het niets. Waar een beweging begint, vertelt vaak waar die nog heen kan.<br><br>Soms gaat het simpelweg om genieten van vakmanschap en originaliteit. Soms om herkennen wanneer iets echt nieuw is, voor een groot publiek of juist voor een kleine gemeenschap. Diezelfde aandacht neem ik mee in mijn werk: invloed, timing, context en uitvoering.", "p_bridge": "Niets hiervan is decoratie. Kunst en muziek houden mij scherp op waar mijn werk om draait: context lezen, een standpunt vormen, vakmanschap herkennen en iets daadwerkelijk laten werken.<br><br>Ideeën zijn niet genoeg. Strategie ook niet. De waarde zit in begrijpen waar iets vandaan komt, zien wat het kan worden, en het vervolgens <span class=\"hl\">bouwen in de echte wereld: organisaties, programma’s, ventures en AI-adoptie.</span>", "dt_prob": "Probleem", "dt_ido": "Ik doe", "dt_out": "Resultaat", "dd_0": "AI-initiatieven blijven steken tussen experiment, beleid en de realiteit van de organisatie.", "dd_1": "Ik ontwerp de adoptie-architectuur: framework, governance, use-caseselectie, capaciteiten, besluitvorming en verandering die voor opschaling nodig zijn.", "dd_2": "Use cases die opschalen, met meetbare waarde en een route naar productie.", "dd_3": "Sterke technologie, maar een versnipperde commerciële aanpak.", "dd_4": "Ik scherp positionering, ICP, enterprise-GTM, partnerships en investor-narratief aan.", "dd_5": "Een venture die deals sluit en schaalbaar groeit, in plaats van blijft pitchen.", "dd_6": "Partnerships en venture-stappen lopen vast in besluitvorming, governance of interne processen.", "dd_7": "Ik structureer partnershipstrategie, operating models en beslissingsbevoegdheden, zodat commerciële kansen niet blijven hangen.", "dd_8": "Deals en partnerships die doorpakken, niet alleen aankondigingen die wegebben.", "dd_9": "Publiek-private AI-ambitie loopt vaak harder dan governance, financiering en uitvoeringskracht.", "dd_10": "Ik ontwerp programma’s, governance en partnerarchitectuur over ministeries, publieke organisaties, partners en corporates heen.", "dd_11": "Programma’s die van intentie naar instrumenten, financiering, use cases en uitvoering gaan.", "fn0": "01 · AI-adoptie en opschaling", "fn1": "02 · Venture growth en GTM", "fn2": "03 · Corporate development", "fn3": "04 · Publiek-private programma’s", "fn4": "05 · Aanvullende domeinen", "tagw": "Complexe technologie<br>commercialiseren.", "role0": "Nu · KickstartAI", "stamp0": "Publiek-privaat · Overheid · Enterprise", "stamp1": "Corporates · Oprichters · Ecosystemen", "kick0": "Waar ik leerde kijken", "kick1": "Waar ik naar luister", "kick2": "Vakmanschap maakt van perspectief uitvoering", "word_art": "Kunst", "word_music": "Muziek", "foot_li": "Selectieve beschikbaarheid voor senior fractional-, interim- en adviesopdrachten, doorgaans twee tot vier dagen per week.", "cred_pol": "Nationale Politie", "h4_learn": "Leren, bijsturen en aanpassen", "p_learn": "Elk project, programma of pilot leert de organisatie iets. Ik zorg dat die kennis wordt vastgelegd, verankerd en benut, in plaats van dat ze verdwijnt zodra het werk klaar is."};var nodes=[].slice.call(document.querySelectorAll("[data-i18n]"));nodes.forEach(function(el){el.setAttribute("data-en",el.innerHTML);});var imgs=[].slice.call(document.querySelectorAll("[data-alt-nl]"));imgs.forEach(function(im){im.setAttribute("data-alt-en",im.getAttribute("alt")||"");});var btns=[].slice.call(document.querySelectorAll(".lang-btn"));function set(lang){nodes.forEach(function(el){var k=el.getAttribute("data-i18n");el.innerHTML=(lang==="nl"&&I18N[k]!=null)?I18N[k]:el.getAttribute("data-en");});imgs.forEach(function(im){im.setAttribute("alt",lang==="nl"?im.getAttribute("data-alt-nl"):im.getAttribute("data-alt-en"));});document.documentElement.lang=lang;btns.forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-lang")===lang?"true":"false");});try{localStorage.setItem("site-lang",lang);}catch(e){}}btns.forEach(function(b){b.addEventListener("click",function(){set(b.getAttribute("data-lang"));});});var saved="en";try{saved=localStorage.getItem("site-lang")||"en";}catch(e){}if(saved==="nl")set("nl");})();
 </script>
 </body>
 </html>
